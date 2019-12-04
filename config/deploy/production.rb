@@ -17,9 +17,9 @@
 # property set. Specify the username and a domain or IP for the server.
 # Don't use `:all`, it's a meta role.
 
-role :app, %w{ec2-user@ec2-18-205-153-201.compute-1.amazonaws.com}
-role :web, %w{ec2-user@ec2-18-205-153-201.compute-1.amazonaws.com}
-role :db,  %w{ec2-user@ec2-18-205-153-201.compute-1.amazonaws.com}
+role :app, %w{deploy_user@ec2-18-212-164-170.compute-1.amazonaws.com}
+role :web, %w{deploy_user@ec2-18-212-164-170.compute-1.amazonaws.com}
+role :db,  %w{deploy_user@ec2-18-205-153-201.compute-1.amazonaws.com}
 
 
 
@@ -42,7 +42,7 @@ role :db,  %w{ec2-user@ec2-18-205-153-201.compute-1.amazonaws.com}
 # Global options
 # --------------
  set :ssh_options, {
-   keys: %w(/Users/isaac/Downloads/isaac_blog.pem),
+   keys: %w(/Users/isaac/Downloads/isaac-blog.pem),
    forward_agent: false,
    auth_methods: %w(publickey password)
  }
